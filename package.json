@@ -1,0 +1,31 @@
+{
+  "name": "@vd/react-component-lib",
+  "version": "0.0.1",
+  "description": "React component library",
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "author": "Viktor Dzhyranov",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "24.0.1",
+    "@rollup/plugin-terser": "0.4.0",
+    "@rollup/plugin-typescript": "11.0.0",
+    "@types/react": "18.0.27",
+    "jest-environment-jsdom": "29.4.1",
+    "react": "18.2.0",
+    "rollup-plugin-dts": "5.1.1",
+    "tslib": "2.5.0",
+    "typescript": "4.9.4"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "rollup": "3.12.0"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/cjs/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
