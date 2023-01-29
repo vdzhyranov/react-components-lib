@@ -1,19 +1,19 @@
 {
   "name": "@vdzhyranov/react-component-lib",
   "version": "0.0.1",
-    "publishConfig": {
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com/vdzhyranov"
   },
   "description": "React component library",
   "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "rollup": "tsc && rollup -c"
   },
   "author": "Viktor Dzhyranov",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "24.0.1",
     "@rollup/plugin-terser": "0.4.0",
-    "@rollup/plugin-typescript": "11.0.0",
+    "@rollup/plugin-typescript": "8.3.3",
     "@types/react": "18.0.27",
     "jest-environment-jsdom": "29.4.1",
     "react": "18.2.0",
@@ -26,10 +26,9 @@
     "rollup": "3.12.0"
   },
   "peerDependencies": {
-    "react":  "18.2.0"
+    "react": "18.2.0"
   },
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
