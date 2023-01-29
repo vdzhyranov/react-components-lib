@@ -7,7 +7,7 @@ interface Props {
   type?: "alert" | "default" | "secondary";
 }
 
-const Button: React.FC<Props> = ({ title, onClick, size, type, ...props }) => {
+const Button = ({ title, onClick, size, type, ...props }: Props) => {
   const sizeStyles = (() => {
     switch (size) {
       case "small":
