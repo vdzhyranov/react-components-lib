@@ -30,7 +30,7 @@
   "peerDependencies": {
     "react": "18.2.0"
   },
-  "main": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
