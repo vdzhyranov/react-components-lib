@@ -1,6 +1,9 @@
 {
-  "name": "@vd/react-component-lib",
+  "name": "@vdzhyranov/react-component-lib",
   "version": "0.0.1",
+    "publishConfig": {
+    "registry": "https://npm.pkg.github.com/vdzhyranov"
+  },
   "description": "React component library",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -21,6 +24,9 @@
   "dependencies": {
     "@rollup/plugin-node-resolve": "15.0.1",
     "rollup": "3.12.0"
+  },
+  "peerDependencies": {
+    "react":  "18.2.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/cjs/index.js",

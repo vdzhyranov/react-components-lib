@@ -1,11 +1,11 @@
 import React from "react";
 
-type Props = {
+interface Props {
   title?: string;
   onClick: () => void;
   size?: "small" | "medium" | "large";
   type?: "alert" | "default" | "secondary";
-};
+}
 
 const Button: React.FC<Props> = ({ title, onClick, size, type, ...props }) => {
   const sizeStyles = (() => {
