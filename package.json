@@ -6,18 +6,20 @@
   },
   "description": "React component library",
   "scripts": {
-    "rollup": "tsc && rollup -c"
+    "rollup": "rollup -c --bundleConfigAsCjs" 
   },
   "author": "Viktor Dzhyranov",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "24.0.1",
+    "@rollup/plugin-image": "3.0.2",
     "@rollup/plugin-terser": "0.4.0",
-    "@rollup/plugin-typescript": "8.3.3",
+    "@rollup/plugin-typescript": "11.0.0",
     "@types/react": "18.0.27",
     "jest-environment-jsdom": "29.4.1",
     "react": "18.2.0",
     "rollup-plugin-dts": "5.1.1",
+    "rollup-plugin-peer-deps-external": "2.2.4",
     "tslib": "2.5.0",
     "typescript": "4.9.4"
   },
@@ -28,7 +30,8 @@
   "peerDependencies": {
     "react": "18.2.0"
   },
-  "main": "dist/cjs/index.js",
+  "main": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
