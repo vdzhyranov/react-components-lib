@@ -4,11 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
 
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import image from '@rollup/plugin-image';
-
-
-const packageJson = require("./package.json");
+import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
@@ -26,17 +22,14 @@ export default [
       },
     ],
     plugins: [
-      peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      
-      image()
     ],
   },
   {
-    input: "dist/esm/types/index.d.ts",
+    input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts.default()],
+    plugins: [dts()],
   },
 ]
